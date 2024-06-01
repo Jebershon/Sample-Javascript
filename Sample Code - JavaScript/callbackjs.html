@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+ //Callbacks
+// function loadscript(src,callback)
+// {
+// let script=document.createElement("script");
+// script.src=src;
+// document.head.append.script;
+// script.onload=()=>callback();
+
+// }
+//Chaining of callbacks
+//  loadscript("main.js",function(){
+//     welcome();
+//     loadscript("sample.js",function(){
+//         welcome2();
+//         loadscript("demo.js",function(){
+//             welcome3();
+//         })
+//     })
+//  });
+ //Handling Error/Success 
+//Callback can have two arguments
+//Argument 1 represents error and argument 2 represents 
+// success
+function loadscript1(src,callback)
+{
+let script=document.createElement("script");
+script.src=src;
+document.head.append.script;
+script.onload=()=>callback(null,"Script Loaded");
+script.onerror=()=>callback(new Error("Unable to Load"));
+}
+loadscript1("sample.js",function(error,message){
+if(error){
+    alert(error);
+}
+else{
+    welcome();
+}
+})
+
+
+
+
+
+
+
+    </script>
+   
+
+
+
+
+
+
+</body>
+</html>

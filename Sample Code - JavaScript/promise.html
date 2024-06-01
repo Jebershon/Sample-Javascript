@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+let promise=new Promise(function(resolve,reject){
+//set of codes to perform tasks
+resolve("Promise Executed");
+reject("Promise failed to complete");
+});
+promise.then(result=>alert(result));//handling success response
+promise.catch(result=>alert(result));//handling failure response
+//LoadScript function using Promise
+function loadscript(src)
+{
+    return new Promise(function(resolve,reject){
+        let script=document.createElement("script");
+        script.src=src;
+        document.head.append(script);
+        script.onload=()=>resolve("Script Loaded");
+        script.onerror=()=>reject(new Error
+        ("Unable to load"));
+    })
+}
+let promiseobj=loadscript("sample.js");
+promiseobj.then(
+    result=>alert(result),
+    error=>alert(error)
+);
+promiseobj.catch(alert(error));
+//finally function does the generic claenup process
+promiseobj.finally(alert("Promise is ready")).then(
+    result=>alert(result)
+);
+//Callback vs Promise
+// 1. Promise can be called several times using then()
+// 2. Callback can not called like that
+// 3. While invoking promise we never think about
+//      result handling
+// 4. IN Callback during invocation itself we have to
+//    provide logic for proceesing result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    
+
+
+
+
+
+</body>
+</html>

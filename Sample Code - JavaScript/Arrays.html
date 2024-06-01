@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+</head>
+<body>
+   <script>
+    let data=[1,2,3,4];
+    delete data[2];
+    //alert(data.length);
+    // Accessing nested properties
+    let user={};
+    alert(user.name);
+  //  alert(user.name.firstname);
+  //
+    // if(!user.name==undefined)
+    // {
+    //     alert(user.name.firstname);
+    // }
+
+    // user.name?user.name.firstname:undefined;
+
+    //Optional Chaining
+//    alert(user?.name.firstname);
+    let student={
+        dept:'CSE',
+        display(){
+            alert(this.dept)
+        }
+    }
+    alert(student?.display());
+    alert(student?.display2());
+
+
+
+
+
+
+
+
+
+
+
+   </script> 
+</body>
+</html>

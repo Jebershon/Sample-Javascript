@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//Closure
+//Allows to create nested functions in JavaScript
+let text="Closure";
+function display(){
+    let message="hi";
+    alert("Display Function");
+    function welcome(){
+        alert("Welcome Function"+message +text)
+    }
+    welcome();
+}
+display();
+function Outer(){
+    return function(){
+        alert("welcome");
+    }
+}
+Outer()();
+//or
+let result=Outer();
+result();
+
+
+
+
+
+
+
+
+
+</script>    
+</body>
+</html>

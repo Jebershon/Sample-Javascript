@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+let user={
+    name:'Arul',
+    department:'CSE',
+    id:101,
+    toString(){
+        return 'Name: '+this.name +'department'+this.department+"ID"+this.id;
+    }}
+    user["location"]="cbe";
+    alert(user.toString());
+    //Creating JSON String
+    let jsonstring=JSON.stringify(user);
+    alert(jsonstring)
+    //{"name":"Arul","department":"CSE","id":101,"location":"cbe"}
+    //JSON String will not have
+    //functions, undefined properties and 
+    let book={
+        price:2000,
+        name:undefined,
+        display(){
+            alert("Book Object")
+        },
+        [Symbol("ID")]:101,
+    }
+    alert(JSON.stringify(book));//{"price":2000}
+    //Convert json string into JS Object
+    let jsonbook=JSON.stringify(book);
+    let b=JSON.parse(jsonbook);
+    alert(b.price);
+    //JSON String
+    let jsondata='{"name":"CSE","Block":"C"}';
+    let dept=JSON.parse(jsondata);
+    alert(dept.name)
+    //Standard format for data exchange 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

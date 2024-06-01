@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+ 
+
+
+</head>
+<body>
+    <script>
+        //Creating an Object via function
+        let obj1={
+            name:'Python',
+            code:'P101',
+        };
+        let obj2=new Object();
+
+        function course(cname,code){
+            return {
+                course_name:cname,
+                course_code:code,
+                display:function(){
+                    alert("Function");
+                },
+            };
+        }
+        let course1=course('Java',"J101");
+        let course2=course('Python',"P101");
+        alert(course1.course_name);
+        alert(course2.course_name);
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

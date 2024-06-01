@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    
+<script>
+let id=Symbol(); //Symbol without description    
+let id1=Symbol("101");// Symbol with description
+//To indicate unique property in an object
+let id2=Symbol('101');
+if(id==id1){
+    //False
+}
+let user={
+    name:'arul',
+    location:'CBE'
+}
+let id3=Symbol('id');
+user[id3]=101;
+// for in iteration symbols are skipped
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

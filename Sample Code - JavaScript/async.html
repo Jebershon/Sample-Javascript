@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        //async function returns a promise object
+        async function display()
+        {
+            return "Display Function"
+        }
+        display().then(alert)
+        async function display2()
+        {
+            return new Promise((resolve,reject)=>
+            resolve("Returning Promise"));
+        }
+        display2().then(alert)
+        // await ==> wait for the promise to complete it 
+        // execution
+        //Should be used inside async function
+        async  function calculate(){
+            let promise=new Promise(
+                (resolve,reject)=>
+                setTimeout(()=>resolve("Success"),3000)
+            )
+            let response=await promise;
+            //rest of the code execution should wait for 
+            //completing the promise
+            return response;
+        }
+        calculate().then(alert) //"Success"
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

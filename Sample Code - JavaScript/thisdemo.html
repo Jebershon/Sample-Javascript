@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        //this keyword
+        //Refer current object reference
+        let student={
+            name:"ABC",
+            dept:"EC",
+            rollno:"101",
+            display:function(){
+                alert(this.dept+this.rollno);
+                alert(student.name);
+            },
+            marks:{ "C1":100,
+            "C2":80,
+            }
+        }
+        let student1=student;
+        student1.display();
+        alert(student.marks.C1);
+       // student.display();
+    
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
